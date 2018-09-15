@@ -12,12 +12,12 @@ Use this format if your SQL statement is short, runs quickly, and only needs to 
 terms<- dbGetQuery(db_con, "SELECT term_code, term_name, term_start_date
 
                    FROM terms
-                   
+
 		   WHERE (registration_start_date < sysdate
-                   
-	 	   OR term_code LIKE '%50')
-                   
-	           AND (term_end_date+30) > sysdate")
+
+		   OR term_code LIKE '%50')
+
+		   AND (term_end_date+30) > sysdate")
 ```
 2. Dynamic queries
 
