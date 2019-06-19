@@ -56,6 +56,8 @@ results<-dbGetQuery(db_con, query.string)
 
 I use this format type when I'm initially writing a query (therefore doing a whole bunch of exploration) and don't yet know if I need to optimize the query speed. For these I can have my SQL query tool open, executing the query and making changes, while also periodically running this code in R. Read in the file using the `read_file()` function from the `readr` package. 
 
+The main downside of this method is that you cannot comment out lines in your .sql file. 
+
 ```r
 sections<- dbGetQuery(db_con, read_file("section_query.sql"))
 ```
